@@ -8,10 +8,11 @@ document.addEventListener('DOMContentLoaded', function () {
     modal.className = 'hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4';
     modal.innerHTML = `
         <div class="bg-white rounded-lg p-6 max-w-2xl w-full">
-            <button id="close-modal" class="float-right text-gray-500 hover:text-gray-700">&times;</button>
+           
             <img id="modal-image" src="" alt="" class="w-full h-48 object-cover mb-4">
             <h2 id="modal-title" class="text-xl font-bold mb-2"></h2>
             <p id="modal-description" class="text-gray-600"></p>
+             <button id="close-modal" class="float-right btn btn-primary">Close</button>
         </div>
     `;
     document.body.appendChild(modal);
@@ -59,6 +60,16 @@ document.addEventListener('DOMContentLoaded', function () {
                       ///  modalImage.alt = title;
                         modalTitle.textContent = title;
                         modalDescription.textContent = description;
+
+                        // Close modal when the close button is clicked
+                        const closeModalButton = document.getElementById('close-modal');
+                        if (closeModalButton) {
+                            closeModalButton.addEventListener('click', function () {
+                                console.log('Close button clicked');
+                                modal.classList.add('hidden');
+                            });
+                        }
+
 
                         // Show the modal
                         modal.classList.remove('hidden');
