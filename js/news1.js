@@ -84,20 +84,6 @@ document.addEventListener('DOMContentLoaded', function () {
             newsContainer.innerHTML = '<p>Error loading news.</p>';
         });
 
-    // Close modal when the close button is clicked
-    const closeModalButton = document.getElementById('close-modal');
-    if (closeModalButton) {
-        closeModalButton.addEventListener('click', function () {
-            console.log('Close button clicked');
-            modal.classList.add('hidden');
-        });
-    }
+   
 
-    // Close modal when clicking outside the modal
-    window.addEventListener('click', function (event) {
-        if (event.target === modal) {
-            console.log('Clicked outside modal');
-            modal.classList.add('hidden');
-        }
-    });
 });
