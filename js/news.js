@@ -1,8 +1,5 @@
-
-
-
 document.addEventListener('DOMContentLoaded', function() {
-    const apiUrl = 'https://newsapi.org/v2/everything?q=tesla&from=2025-02-10&sortBy=publishedAt&apiKey=451352e5a6d547cea728fa6778657d3c';
+    const apiUrl = 'https://newsapi.org/v2/everything?q=tesla&from=2025-02-11&sortBy=publishedAt&apiKey=451352e5a6d547cea728fa6778657d3c';
     const newsContainer = document.getElementById('news-container');
 
     fetch(apiUrl)
