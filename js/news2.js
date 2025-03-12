@@ -39,16 +39,23 @@ const displayDatas=(articles)=>{
       card.classList = "card bg-base-100 shadow-sm "
       card.innerHTML = 
       `
-    <figure>
+    <figure class= " h-[300px]">
         <img
        src=${article.urlToImage}
+       class = "h-full w-full object-cover"
         alt="Shoes" />
     </figure>
     <div class="card-body">
-       <h2 class="card-title">Card Title</h2>
-      <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-        <div class="card-actions justify-end">
-          <button class="btn btn-primary">Buy Now</button>
+       <h2 class="card-title">${article.title}</h2>     
+        <div class="card-actions flex justify-between items-center px-0 py-2 gap-1  ">
+            <div class="">
+              <div class="flex gap-2">
+               <img class="w-10" src=" https://img.icons8.com/?size=40&id=21441&format=png " />
+               <p class = "font-bold">${article.author}</p>
+              </div>
+             <p>${article.publishedAt}</p>
+            </div>
+          <button class="btn btn-primary">Read More</button>
         </div>
     </div>
 
